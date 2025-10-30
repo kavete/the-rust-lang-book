@@ -42,6 +42,8 @@ fn main() {
     println!("Five: {five}");
 
     control_flow();
+
+    println!("Yoh");
 }
 
 fn scalar_data_types() {
