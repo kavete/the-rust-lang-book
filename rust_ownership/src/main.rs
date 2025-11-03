@@ -53,7 +53,7 @@ fn main() {
 
     println!("{full}");
 
-    // println!("{first}");  This doe not work
+    // println!("{first}");  This does not work
     //
     // Cloning avoids Moves
 
