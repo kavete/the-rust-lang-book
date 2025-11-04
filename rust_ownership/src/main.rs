@@ -63,6 +63,47 @@ fn main() {
     let full_name = add_suffix(name_clone);
 
     println!("{full_name} originally {name}");
+
+    let s1 = String::from("Hello");
+
+    let len = calculate_length(&s1);
+
+    println!("The length of {s1} is {len}");
+
+    // Mutable references
+
+    let mut s = String::from("Yoh");
+
+    change(&mut s);
+
+    // You can only have one mutable reference to a value in a certain scope
+    // You cannot mix mutable and immutable references to a value in the same scope
+
+    //The Slice Type
+    // Allow referencing of a contiguous sequence of a collection
+    //
+
+    let first_word = first_word(&s);
+
+    let string2 = String::from("Hello World");
+
+    let hello = &string2[0..5];
+    let world = &string2[6..11];
+
+    println!("{hello}  {world}");
+
+    let first_word_2 = first_word_2(&s);
+
+    println!("{first_word}  {first_word_2}");
+
+    // Other slices
+    //
+
+    let array = [1, 2, 3, 4, 5];
+
+    let slice = &array[1..3];
+
+    println!(" {slice:?}");
 }
 
 fn read(y: bool) {
@@ -82,4 +123,35 @@ fn make_and_drop() {
 fn add_suffix(mut name: String) -> String {
     name.push_str(" Jr");
     name
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+
+fn change(s: &mut String) {
+    s.push_str("Nigga");
+}
+
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return i;
+        }
+    }
+    s.len()
+}
+
+fn first_word_2(s: &String) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    &s[..]
 }
