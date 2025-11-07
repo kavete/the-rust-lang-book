@@ -56,3 +56,18 @@ mod back_of_house {
         Salad,
     }
 }
+
+// Bringing paths to scope with the use keyword
+//
+use crate::front_of_house::hosting;
+
+use std::fmt::Result;
+
+use std::io::Result as IoResult;
+
+// Nested paths
+
+use std::{cmp::Ordering, io};
+
+// use std::io::{self, Write};
+//
