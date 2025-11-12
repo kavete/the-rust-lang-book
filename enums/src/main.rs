@@ -1,4 +1,6 @@
 #![allow(unused)]
+
+use std::fmt::format;
 enum IpAddrKind {
     V4(String),
     V6(String),
@@ -59,6 +61,8 @@ fn main() {
         _ => (),
     }
 
+    //Shorter way
+
     if let Some(max) = config_max {
         println!("The maximum is set to {max}");
     }
@@ -67,11 +71,18 @@ fn main() {
 
     let coin = Coin::Quarter(UsState::Alabama);
 
+    //match coin {
+    //  Coin::Quarter(state) => println!("State Quarter from {state:?}"),
+    //  _ => (),
+    // }
+
     if let Coin::Quarter(state) = coin {
         println!("State quarter from {state:?}!");
     } else {
         count += 1;
     }
+
+    // Staying on the happy path with let else
 }
 
 fn value_in_cents(coin: Coin) -> u8 {
@@ -90,5 +101,17 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
     match x {
         None => None,
         Some(i) => Some(i + 1),
+    }
+}
+
+fn describe_state_quarter(coin: Coin) -> Option<String> {
+    if let Coin::Quarter(state) = coin {
+        if state.existed_in(1900) {
+            Some(format!("{state:?} is pretty old"))
+        } else {
+            Some(format!("{state:?} is relatively new"))
+        }
+    } else {
+        None
     }
 }
