@@ -1,4 +1,6 @@
 #![allow(unused)]
+
+pub mod utf_encoding;
 fn main() {
     let v: Vec<i32> = Vec::new();
 
@@ -16,7 +18,7 @@ fn main() {
 
     let third = &v2[2];
 
-    print!("Third element {third}");
+    println!("Third element {third}");
 
     let third = v2.get(2);
 
@@ -52,4 +54,8 @@ fn main() {
     ];
 
     // Dropping a vector drops it's elements
+    //
+    // Storing UTF-encoded text with strings
+
+    utf_encoding::strings::play_with_strings();
 }
