@@ -1,6 +1,8 @@
 #![allow(unused)]
 
+pub mod hashmaps;
 pub mod utf_encoding;
+
 fn main() {
     let v: Vec<i32> = Vec::new();
 
@@ -58,4 +60,8 @@ fn main() {
     // Storing UTF-encoded text with strings
 
     utf_encoding::strings::play_with_strings();
+
+    // Using hashmaps
+
+    hashmaps::hashmaps::playing_with_hashmaps();
 }
