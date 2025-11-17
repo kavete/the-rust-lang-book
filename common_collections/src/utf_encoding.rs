@@ -1,5 +1,4 @@
 pub mod strings {
-    use std::fmt::format;
 
     pub fn play_with_strings() {
         let mut s = String::new();
