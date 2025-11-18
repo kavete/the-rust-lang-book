@@ -1,7 +1,7 @@
 // Common programming concepts
 //
 //
-use mod data_types;
+pub mod data_types;
 
 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
@@ -33,10 +33,10 @@ fn main() {
 
     let spaces = spaces.len(); // It's now an integer (usize)
 
-    println!("Spaces: {spaces}"); // Ouputs spaces
+    println!("Spaces: {spaces}"); // Outputs spaces
     //
 
-    scalar_data_types();
+    data_types::scalar_data_types();
     compound_data_types();
     height_with_units(5, 'm');
 
@@ -47,8 +47,6 @@ fn main() {
 
     println!("Yoh");
 }
-
-
 
 fn compound_data_types() {
     // Tuples

@@ -59,9 +59,9 @@ fn main() {
     //
     // Storing UTF-encoded text with strings
 
-    utf_encoding::strings::play_with_strings();
+    utf_encoding::play_with_strings();
 
     // Using hashmaps
 
-    hashmaps::hashmaps::playing_with_hashmaps();
+    hashmaps::playing_with_hashmaps();
 }
