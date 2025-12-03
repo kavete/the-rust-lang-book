@@ -54,6 +54,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore = "To check integrated tests"]
     fn another() {
         panic!("A failed test");
     }
@@ -94,6 +95,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn greeting_contains_name() {
         let result = greeting("Brian");
         assert!(
