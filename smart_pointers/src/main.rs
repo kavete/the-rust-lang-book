@@ -4,6 +4,8 @@ enum List {
     Nil,
 }
 
+pub mod reference_counting;
+
 use std::ops::Deref;
 
 struct MyBox<T>(T);
@@ -33,7 +35,7 @@ impl Drop for CustomSmartPointer {
 }
 
 fn main() {
-    use List::{Cons, Nil};
+    // use List::{Cons, Nil};
     let b = Box::new(5);
     println!("b = {b}");
 
@@ -50,7 +52,10 @@ fn main() {
 
     assert_eq!(5, *z2);
 
-    let list = Cons(1, Box::new(Cons(2, Box::new(Cons(3, Box::new(Nil))))));
+    let list = List::Cons(
+        1,
+        Box::new(List::Cons(2, Box::new(List::Cons(3, Box::new(List::Nil))))),
+    );
 
     println!("{:?}", list);
 
@@ -66,4 +71,6 @@ fn main() {
 
     drop(d);
     println!("Custom smart pointer dropped before the end of main");
+
+    reference_counting::rc_test();
 }
