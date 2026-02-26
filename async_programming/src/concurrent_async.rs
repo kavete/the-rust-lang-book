@@ -16,7 +16,7 @@ pub fn concurrent() {
         handle.await.unwrap();
     });
 }
-
+ 
 pub fn join_async() {
     trpl::block_on(async {
         let fut1 = async {
@@ -48,3 +48,5 @@ pub fn message_passing() {
         println!("received: {received}");
     });
 }
+
+
