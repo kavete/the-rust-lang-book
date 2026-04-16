@@ -1,0 +1,6 @@
+[workspace]
+resolver = "2"
+members = ["async_programming", "cargo_and_crates", "closures", "common_collections", "common_concepts", "enums", "error_handling", "fearless_concurrency", "generic_types", "iterators", "lifetimes", "mini-grep", "module_system", "object_oriented_design", "pattern_matching", "rust_ownership", "smart_pointers", "structs", "tests", "traits"]
+
+[workspace.dependencies]
+trpl = "0.3.0"
