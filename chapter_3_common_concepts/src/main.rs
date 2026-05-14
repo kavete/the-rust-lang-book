@@ -1,13 +1,17 @@
-// Common programming concepts
-//
-//
-pub mod data_types;
-
+/// Common programming concepts
+///
+///
+///
+// Declaring a constant.
+// Some simple evaluations can be done
 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
 fn main() {
-    let mut x = 5; // Declare a mutable variable x
+    // Declare a mutable variable x
+    let mut x = 5;
+
     println!("The value of x is: {x}");
+
     x = 6; // Raises an errror if  x is immutable
 
     println!("The value of x is: {}", x);
@@ -16,15 +20,19 @@ fn main() {
 
     // Shadowing
 
+    // Declare a variable
     let to_shadow = 5;
 
+    // Shadow the previous variable
     let to_shadow = to_shadow + 1;
 
     {
-        let to_shadow = to_shadow * 2;
+        // This is a different varible as it is in a different scope
+        let to_shadow = to_shadow * 2; // The to_shadow variable on the right side is the one in the outer scope 
         println!("The value in the inner scope is {to_shadow}"); // Ouputs 12
     }
 
+    // to_shadow in the outer scope is still 6 since the to_shadow varible inside the scope is dropped when the scope ends
     println!("The value in the outerscope is: {to_shadow}"); // Outputs 6
 
     // Shadowing allows data type change
@@ -34,9 +42,8 @@ fn main() {
     let spaces = spaces.len(); // It's now an integer (usize)
 
     println!("Spaces: {spaces}"); // Outputs spaces
-    //
 
-    data_types::scalar_data_types();
+    data_types();
     compound_data_types();
     height_with_units(5, 'm');
 
@@ -45,16 +52,73 @@ fn main() {
 
     control_flow();
 
-    println!("Yoh");
+    let number = 5;
+
+    add_one(number);
+
+    println!("{number}");
+
+    let some_string = String::from("Yoh");
+
+    work_on_string(&some_string);
+
+    println!("{some_string}");
+}
+
+fn add_one(number: i32) -> i32 {
+    number + 1
+}
+
+fn work_on_string(string: &String) -> &String {
+    string
+}
+
+fn data_types() {
+    // Declare a float (f64)
+    // f64 is mostly used. There also f32
+    let x: f64 = 2.0;
+
+    let y: f64 = 3.0;
+
+    println!("x and y: {x} and {y}");
+
+    let difference = y - x; // They must both be either f64 or both f32
+
+    println!("y -x {difference}");
+
+    let quotient = y / x; // Returns 1.5 since they are floats 
+
+    println!("Quotient: {quotient}");
+
+    let num1: i32 = -5;
+
+    let num2: i32 = 3;
+
+    let truncated = num1 / num2; //The value returned is -1
+
+    println!("Truncated: {truncated}");
+
+    // Boolean
+    let active = true;
+
+    println!("Is active: {active}");
+
+    let active: bool = false; // shadows it to true
+
+    println!("Is active: {active}");
+
+    // Character
+    let _character = 'z'; // Characters use single quotes just like in C
 }
 
 fn compound_data_types() {
     // Tuples
 
+    // Declare a tuple
+    // It can contain other simple data types like f64, f32, i32 etc
     let mut numbers = (500, 6.4, 1);
 
     //Destructuring a tuple
-
     let (_x, y, _z) = numbers;
 
     println!("The value of y is: {y}");
@@ -99,7 +163,7 @@ fn control_flow() {
         println!("the number is divisible by 2 but not by 5 or 3")
     }
 
-    let real_number = if number >= 0 { true } else { false };
+    let real_number = number >= 0;
 
     println!("Real number: {real_number}");
 
