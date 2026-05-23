@@ -41,7 +41,7 @@ fn main() {
 
     let spaces = spaces.len(); // It's now an integer (usize)
 
-    println!("Spaces: {spaces}"); // Outputs spaces
+    println!("Spaces: {spaces}"); // Outputs  the length of spaces
 
     data_types();
     compound_data_types();
@@ -75,7 +75,7 @@ fn work_on_string(string: &String) -> &String {
 
 fn data_types() {
     // Declare a float (f64)
-    // f64 is mostly used. There also f32
+    // f64 is mostly used. There is  also f32
     let x: f64 = 2.0;
 
     let y: f64 = 3.0;

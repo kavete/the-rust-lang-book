@@ -1,5 +1,5 @@
 [package]
-name = "rust_ownership"
+name = "chapter_4_understanding_ownership"
 version = "0.1.0"
 edition = "2024"
 

@@ -1,5 +1,4 @@
 //  Safety == Absence of undefined behaviour
-// Safe
 
 fn main() {
     let x = true;
