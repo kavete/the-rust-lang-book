@@ -117,6 +117,14 @@ name = "chapter_4_understanding_ownership"
 version = "0.1.0"
 
 [[package]]
+name = "chapter_5_structs"
+version = "0.1.0"
+
+[[package]]
+name = "chapter_6_enums"
+version = "0.1.0"
+
+[[package]]
 name = "closures_and_iterators"
 version = "0.1.0"
 
@@ -198,10 +206,6 @@ name = "ego-tree"
 version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "12a0bb14ac04a9fcf170d0bbbef949b44cc492f4452bd20c095636956f653642"
-
-[[package]]
-name = "enums"
-version = "0.1.0"
 
 [[package]]
 name = "equivalent"
@@ -1418,10 +1422,6 @@ dependencies = [
  "proc-macro2",
  "quote",
 ]
-
-[[package]]
-name = "structs"
-version = "0.1.0"
 
 [[package]]
 name = "subtle"

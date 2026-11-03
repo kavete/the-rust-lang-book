@@ -5,6 +5,8 @@ struct Rectangle {
     width: u32,
     height: u32,
 }
+
+/// Methods on a struct
 impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
@@ -20,6 +22,7 @@ impl Rectangle {
 }
 
 impl Rectangle {
+    /// This does not require an instance of a rectangle
     fn square(size: u32) -> Self {
         Self {
             width: size,
@@ -30,6 +33,8 @@ impl Rectangle {
 
 fn main() {
     println!("Hello, world!");
+
+    // let square_rect = Rectangle::square(5);
 
     struct User {
         active: bool,
@@ -68,6 +73,7 @@ fn main() {
         ..user2
     };
 
+    // Tuple structs
     struct Color(i32, i32, i32);
     struct Point(i32, i32, i32);
 

@@ -1,6 +1,7 @@
 #![allow(unused)]
 
 use std::fmt::format;
+// Enum with data
 enum IpAddrKind {
     V4(String),
     V6(String),
