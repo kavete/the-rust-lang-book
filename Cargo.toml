@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["async_programming", "cargo_and_crates", "closures", "common_collections", "chapter_3_common_concepts", "chapter_6_enums", "error_handling", "fearless_concurrency", "generic_types", "iterators", "lifetimes", "mini-grep", "module_system", "object_oriented_design", "pattern_matching", "chapter_4_understanding_ownership", "smart_pointers", "chapter_5_structs", "tests", "traits", "unsafe_rust", "chapter_2_guessing_game"]
+members = ["async_programming", "cargo_and_crates", "closures", "common_collections", "chapter_3_common_concepts", "chapter_6_enums", "error_handling", "fearless_concurrency", "generic_types", "iterators", "lifetimes", "mini-grep", "chapter_7_packages_crates_modules", "object_oriented_design", "pattern_matching", "chapter_4_understanding_ownership", "smart_pointers", "chapter_5_structs", "tests", "traits", "unsafe_rust", "chapter_2_guessing_game"]
 
 [workspace.dependencies]
 trpl = "0.3.0"
