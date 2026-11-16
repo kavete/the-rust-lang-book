@@ -129,11 +129,11 @@ name = "chapter_7_packages_crates_modules"
 version = "0.1.0"
 
 [[package]]
-name = "closures_and_iterators"
+name = "chapter_8_common_collections"
 version = "0.1.0"
 
 [[package]]
-name = "common_collections"
+name = "closures_and_iterators"
 version = "0.1.0"
 
 [[package]]

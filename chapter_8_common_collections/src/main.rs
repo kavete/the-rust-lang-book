@@ -4,8 +4,11 @@ pub mod hashmaps;
 pub mod utf_encoding;
 
 fn main() {
+    // Create a new empty vector
+    // The vector will contain i32 values
     let v: Vec<i32> = Vec::new();
 
+    // Create new vector with the vec macro
     let v2 = vec![4, 5, 8, 9, 23];
 
     // Updating a vector
@@ -17,6 +20,7 @@ fn main() {
     numbers.push(7);
 
     // Reading elements of a vector
+    // Use index or the get method
 
     let third = &v2[2];
 

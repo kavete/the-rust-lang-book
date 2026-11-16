@@ -1,25 +1,30 @@
-
 pub fn play_with_strings() {
+    // Create a new empty string
     let mut s = String::new();
 
+    // Create a string literal
     let data = "initial contents";
 
+    // Convert a string literal &str to String
     let s2 = data.to_string();
 
     println!("{s2}");
 
+    // Create a string directly from a literal
     let s3 = String::from("Hey What's cooking");
 
     // Updating strings
-
     let mut game = String::from("foot");
 
+    // Push a string
     game.push_str("ball");
 
+    // game == football
     println!("{game}");
 
     let mut lol = String::from("lol");
 
+    // Push a single character
     lol.push('!');
 
     println!("{lol}");
@@ -55,6 +60,7 @@ pub fn play_with_strings() {
         println!("{c}");
     }
 
+    // Will print the bytes
     for b in "Здр".bytes() {
         println!("{b}");
     }

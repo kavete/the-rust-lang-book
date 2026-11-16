@@ -16,6 +16,7 @@ pub fn playing_with_hashmaps() {
 
     println!("{score:?}");
 
+    // Iterate over the key value pairs
     for (key, value) in &scores {
         println!("{key} {value}");
     }
