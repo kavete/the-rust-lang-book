@@ -63,6 +63,16 @@ fn main() {
         },
     };
 
+    //Alternatives to Result<T,E>
+
+    let greeting_file = File::open("hello.txt").unwrap_or_else(|error| {
+        if error.kind() == ErrorKind::NotFound {
+            File::create("hello.txt")
+                .unwrap_or_else(|error| panic!("Problem creating the file: {error:?}"))
+        } else {
+            panic!("Problem creating the file: {:?}", error)
+        }
+    });
     // Shortcuts for panic on error with result: unwrap and except
 
     let greeting_file = File::open("hello.txt").unwrap(); // If result
